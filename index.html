@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Máquina+ — marketplace de máquinas novas e usadas. Compre, venda e compare máquinas pesadas.">
+  <title>Máquina+ | Compre • Venda • Compare</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Máquina+ início">
+      <span class="brand-mark">M<span>+</span></span>
+      <span>
+        <strong>MÁQUINA<span>+</span></strong>
+        <small>COMPRE • VENDA • COMPARE</small>
+      </span>
+    </a>
+
+    <nav class="nav">
+      <a href="#inicio">Início</a>
+      <a href="#maquinas">Comprar</a>
+      <a href="#vender">Vender</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <a class="btn btn-yellow btn-small" href="#vender">Anunciar máquina</a>
+    <button class="menu-btn" aria-label="Abrir menu">☰</button>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">MÁQUINAS NOVAS E USADAS</p>
+        <h1>Encontre sua<br><span>próxima máquina.</span></h1>
+        <p class="hero-copy">Conectamos compradores e vendedores de máquinas em um só lugar.</p>
+
+        <form class="search-box" id="searchForm">
+          <input id="searchInput" type="search" placeholder="O que você está procurando?" aria-label="O que você está procurando?">
+          <select id="categoryFilter" aria-label="Categoria">
+            <option value="">Todas as máquinas</option>
+            <option>Escavadeiras</option>
+            <option>Pá carregadeiras</option>
+            <option>Empilhadeiras</option>
+            <option>Retroescavadeiras</option>
+            <option>Mini carregadeiras</option>
+            <option>Motoniveladoras</option>
+          </select>
+          <select id="locationFilter" aria-label="Localização">
+            <option value="">Todo o Brasil</option>
+            <option>Mato Grosso</option>
+            <option>Goiás</option>
+            <option>Paraná</option>
+            <option>São Paulo</option>
+          </select>
+          <button class="btn btn-yellow" type="submit">🔎 Buscar</button>
+        </form>
+
+        <div class="quick-links">
+          <a href="#maquinas">🔥 Ofertas</a>
+          <a href="#maquinas">★ Novas</a>
+          <a href="#maquinas">♻ Usadas</a>
+          <a href="#pedido">⌖ Procurar para mim</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="maquinas" class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">SELEÇÃO MÁQUINA+</p>
+          <h2>Ofertas em destaque</h2>
+          <p>Máquinas selecionadas por vendedores da plataforma.</p>
+        </div>
+        <button class="text-btn" id="showAll">Ver todas as máquinas →</button>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <article class="product-card" data-name="Lonking CDM6205" data-category="Escavadeiras" data-location="Mato Grosso">
+          <div class="product-image image-excavator"><span class="badge">NOVA</span></div>
+          <div class="product-body">
+            <h3>LONKING CDM6205</h3>
+            <p>Escavadeira hidráulica</p>
+            <div class="specs"><span>21 toneladas</span><span>2026</span><span>MT</span></div>
+            <strong class="price">R$ 700.000</strong>
+            <button class="interest-btn" data-machine="LONKING CDM6205">Tenho interesse</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="Lonking CDM833" data-category="Pá carregadeiras" data-location="Mato Grosso">
+          <div class="product-image image-loader"><span class="badge">NOVA</span></div>
+          <div class="product-body">
+            <h3>LONKING CDM833</h3>
+            <p>Pá carregadeira</p>
+            <div class="specs"><span>Nova</span><span>2026</span><span>MT</span></div>
+            <strong class="price">R$ 365.000</strong>
+            <button class="interest-btn" data-machine="LONKING CDM833">Tenho interesse</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="Empilhadeira FD35T" data-category="Empilhadeiras" data-location="Mato Grosso">
+          <div class="product-image image-forklift"><span class="badge">NOVA</span></div>
+          <div class="product-body">
+            <h3>EMPILHADEIRA FD35T</h3>
+            <p>Diesel</p>
+            <div class="specs"><span>3,5 toneladas</span><span>Nova</span><span>MT</span></div>
+            <strong class="price">R$ 92.500</strong>
+            <button class="interest-btn" data-machine="EMPILHADEIRA FD35T">Tenho interesse</button>
+          </div>
+        </article>
+
+        <article class="product-card" data-name="Caterpillar 320D" data-category="Escavadeiras" data-location="Mato Grosso">
+          <div class="product-image image-used-excavator"><span class="badge used">USADA</span></div>
+          <div class="product-body">
+            <h3>CATERPILLAR 320D</h3>
+            <p>Escavadeira hidráulica</p>
+            <div class="specs"><span>20 toneladas</span><span>2020</span><span>MT</span></div>
+            <strong class="price">R$ 480.000</strong>
+            <button class="interest-btn" data-machine="CATERPILLAR 320D">Tenho interesse</button>
+          </div>
+        </article>
+      </div>
+
+      <p id="noResults" class="no-results" hidden>Nenhuma máquina encontrada com esses filtros.</p>
+    </section>
+
+    <section id="categorias" class="section categories-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">ENCONTRE POR TIPO</p>
+          <h2>Escolha uma categoria</h2>
+        </div>
+      </div>
+      <div class="category-grid">
+        <button class="category-card cat-exc" data-category="Escavadeiras"><span>⛏</span><strong>Escavadeiras</strong><small>Ver máquinas →</small></button>
+        <button class="category-card cat-loader" data-category="Pá carregadeiras"><span>🚜</span><strong>Pá carregadeiras</strong><small>Ver máquinas →</small></button>
+        <button class="category-card cat-backhoe" data-category="Retroescavadeiras"><span>🏗</span><strong>Retroescavadeiras</strong><small>Ver máquinas →</small></button>
+        <button class="category-card cat-fork" data-category="Empilhadeiras"><span>▣</span><strong>Empilhadeiras</strong><small>Ver máquinas →</small></button>
+        <button class="category-card cat-mini" data-category="Mini carregadeiras"><span>⚙</span><strong>Mini carregadeiras</strong><small>Ver máquinas →</small></button>
+        <button class="category-card cat-grader" data-category="Motoniveladoras"><span>▬</span><strong>Motoniveladoras</strong><small>Ver máquinas →</small></button>
+      </div>
+    </section>
+
+    <section id="vender" class="seller-banner">
+      <div>
+        <p class="eyebrow">PARA QUEM QUER VENDER</p>
+        <h2>Tem uma máquina parada?</h2>
+        <p>Coloque sua máquina diante de compradores interessados.</p>
+        <div class="seller-benefits"><span>✓ Divulgação</span><span>✓ Leads</span><span>✓ WhatsApp</span><span>✓ Alcance nacional</span></div>
+      </div>
+      <div class="seller-price">
+        <small>A partir de</small>
+        <strong>R$ 29,90</strong>
+        <button class="btn btn-yellow" id="sellerBtn">Anunciar minha máquina</button>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section">
+      <div class="section-heading centered">
+        <div>
+          <p class="eyebrow dark">SIMPLES, RÁPIDO E SEGURO</p>
+          <h2>Como funciona</h2>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step"><b>01</b><span>📝</span><h3>Anuncie</h3><p>Cadastre sua máquina em poucos minutos.</p></div>
+        <div class="step"><b>02</b><span>💬</span><h3>Receba interessados</h3><p>Compradores encontram seu anúncio.</p></div>
+        <div class="step"><b>03</b><span>🤝</span><h3>Negocie</h3><p>Converse e negocie diretamente.</p></div>
+        <div class="step"><b>04</b><span>✓</span><h3>Venda</h3><p>Feche seu negócio com segurança.</p></div>
+      </div>
+    </section>
+
+    <section id="pedido" class="request-section">
+      <div class="request-copy">
+        <p class="eyebrow">NÃO ENCONTROU?</p>
+        <h2>Procure a máquina para você.</h2>
+        <p>Conte o que precisa. Podemos encontrar opções disponíveis no mercado.</p>
+      </div>
+      <form id="requestForm" class="request-form">
+        <select required><option value="">Tipo de máquina</option><option>Escavadeira</option><option>Pá carregadeira</option><option>Empilhadeira</option><option>Retroescavadeira</option></select>
+        <input required placeholder="Faixa de preço">
+        <input required placeholder="Localização">
+        <input required placeholder="Seu WhatsApp">
+        <button class="btn btn-yellow" type="submit">Procurar para mim</button>
+      </form>
+    </section>
+
+    <section id="contato" class="contact-section">
+      <div>
+        <p class="eyebrow dark">MÁQUINA+</p>
+        <h2>Grandes máquinas movem grandes negócios.</h2>
+        <p>Entre em contato para anunciar, comprar ou apresentar uma parceria.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-dark" href="https://wa.me/5565996826972" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-outline" href="mailto:contato@maquinamais.com.br">E-mail</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <div class="brand"><span class="brand-mark">M<span>+</span></span><span><strong>MÁQUINA<span>+</span></strong><small>COMPRE • VENDA • COMPARE</small></span></div>
+      <p>Marketplace de máquinas novas e usadas.</p>
+    </div>
+    <div><h4>Comprar</h4><a href="#maquinas">Máquinas novas</a><a href="#maquinas">Máquinas usadas</a><a href="#maquinas">Ofertas</a></div>
+    <div><h4>Vender</h4><a href="#vender">Anunciar máquina</a><a href="#vender">Planos</a><a href="#como-funciona">Como funciona</a></div>
+    <div><h4>Atendimento</h4><a href="https://wa.me/5565996826972" target="_blank" rel="noopener">WhatsApp</a><a href="#contato">Contato</a><a href="mailto:contato@maquinamais.com.br">E-mail</a></div>
+    <div class="footer-bottom">© 2026 Máquina+. Todos os direitos reservados.</div>
+  </footer>
+
+  <div class="modal" id="interestModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
+      <p class="eyebrow dark">TENHO INTERESSE</p>
+      <h2 id="modalMachine">Máquina</h2>
+      <p>Deixe seus dados e o atendimento poderá entrar em contato.</p>
+      <form id="interestForm">
+        <input id="interestName" required placeholder="Seu nome">
+        <input id="interestWhatsApp" required placeholder="Seu WhatsApp">
+        <input id="interestCity" required placeholder="Cidade/UF">
+        <button class="btn btn-yellow" type="submit">Enviar interesse</button>
+      </form>
+      <small>Este formulário é um protótipo. Na próxima etapa, conectaremos os leads ao Google Sheets/WhatsApp.</small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
